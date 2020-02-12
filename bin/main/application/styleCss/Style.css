@@ -1,0 +1,15 @@
+.button{
+    -fx-text-fill: #fff;
+    -fx-background-color: #706F6E;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-padding:10px;
+    
+}
+
+
+.button:hover, .button:focused{
+	-fx-cursor:hand;
+	-fx-background-color: #979595;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 4,0,0,0);
+}

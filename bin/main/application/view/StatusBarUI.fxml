@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="statusBarAnchor" maxHeight="30.0" maxWidth="-Infinity" minHeight="30.0" minWidth="-Infinity" prefHeight="30.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.StatusBarController">
+   <children>
+      <Pane fx:id="pane" maxHeight="30.0" maxWidth="-Infinity" minHeight="30.0" minWidth="-Infinity" prefHeight="30.0" prefWidth="800.0">
+         <children>
+            <Slider fx:id="zoomSlider" blockIncrement="20.0" layoutX="130.0" majorTickUnit="5.0" max="200.0" maxHeight="30.0" maxWidth="200.0" minHeight="30.0" minWidth="200.0" minorTickCount="5" prefHeight="30.0" prefWidth="200.0" value="100.0" />
+            <Label fx:id="shapeWidth" layoutX="356.0" layoutY="8.0" prefHeight="17.0" prefWidth="104.0" text="Width :" />
+            <Label fx:id="shapeHeight" layoutX="457.0" layoutY="8.0" prefHeight="17.0" prefWidth="127.0" text="Height :" />
+         </children></Pane>
+   </children>
+</AnchorPane>

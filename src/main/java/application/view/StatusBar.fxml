@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="statusBarAnchor" maxHeight="30.0" maxWidth="-Infinity" minHeight="30.0" minWidth="-Infinity" prefHeight="30.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.StatusBarController">
+   <children>
+      <Slider fx:id="zoomSlider" maxHeight="20.0" maxWidth="130.0" minHeight="20.0" minWidth="130.0" prefHeight="20.0" prefWidth="130.0" value="50.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="5.0" />
+      <Label graphicTextGap="0.0" maxHeight="20.0" maxWidth="8.0" minHeight="20.0" minWidth="8.0" prefHeight="20.0" prefWidth="8.0" text="+" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="0.0" maxHeight="20.0" maxWidth="8.0" minHeight="20.0" minWidth="8.0" prefHeight="20.0" prefWidth="8.0" text="-" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

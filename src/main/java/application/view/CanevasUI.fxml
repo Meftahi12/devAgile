@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CanevasController">
+   <children>
+      <ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="770.0" style="-fx-background-color: WHITE;">
+         <content>
+            <Group fx:id="root">
+               <children>
+                  <AnchorPane fx:id="canvas" prefHeight="500.0" prefWidth="770.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="755.0">
+                           <rowConstraints>
+                              <RowConstraints fillHeight="false" maxHeight="32.0" minHeight="0.0" prefHeight="0.0" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children></AnchorPane>
+               </children>
+            </Group>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

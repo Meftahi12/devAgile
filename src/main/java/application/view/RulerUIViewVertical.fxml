@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="30.0" minHeight="-Infinity" minWidth="30.0" prefHeight="500.0" prefWidth="30.0" stylesheets="@../styleCss/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.VerticalRulerUIControler">
+   <children>
+      <Canvas fx:id="rulerCanvas" height="500.0" width="30.0" />
+   </children>
+</AnchorPane>

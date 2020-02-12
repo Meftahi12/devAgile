@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="40.0" maxWidth="-Infinity" minHeight="40.0" minWidth="-Infinity" prefHeight="40.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PalettePatternsUIController">
+   <children>
+      <Pane fx:id="pane" maxHeight="40.0" maxWidth="-Infinity" minHeight="40.0" minWidth="-Infinity" prefHeight="40.0" prefWidth="770.0" AnchorPane.leftAnchor="30.0">
+         <children>
+            <HBox fx:id="hBox" maxHeight="40.0" maxWidth="-Infinity" minHeight="40.0" minWidth="-Infinity" prefHeight="40.0" prefWidth="770.0">
+               <children>
+                  <Button fx:id="image1" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image1.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image2" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image2.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image3" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image3.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image4" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image4.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image5" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image5.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image6" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image6.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="3.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image7" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image7.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image8" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image8.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="image9" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#imageClicked" prefHeight="30.0" prefWidth="30.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../resources/image9.jpg" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator maxHeight="30.0" minHeight="30.0" orientation="VERTICAL" prefHeight="30.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Shape Color:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <ColorPicker fx:id="colorPicker" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" onAction="#pickerShapeColor" prefHeight="30.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin></ColorPicker>
+                  <CheckBox fx:id="filled" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#filledChecked" prefHeight="30.0" text="filled Shape">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="stroke Color:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <ColorPicker fx:id="strokeColor" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" onAction="#strokShapeColor" prefHeight="30.0" prefWidth="50.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></ColorPicker>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
