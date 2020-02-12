@@ -146,7 +146,7 @@ public class MyRectangle extends SingleShape {
 
 	@Override
 	public SingleShape clone() {
-		MyRoundedRectangle rr = new MyRoundedRectangle();
+		MyRectangle rr = new MyRectangle();
 		return rr;
 	}
 

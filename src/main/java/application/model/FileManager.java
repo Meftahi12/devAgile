@@ -115,7 +115,7 @@ public class FileManager {
 			default : temp = new MyCircle();break;
 			}
 			((SingleShape) temp).setProperties(m);
-			((SingleShape) temp).createShape(false,false,null);
+			((SingleShape) temp).createShapeForImport();;
 		}
 		catch (Exception e) {
 			Logger logger = Logger.getGlobal(); 
@@ -123,7 +123,6 @@ public class FileManager {
 		}
 
 		myList.add(temp);
-
 	}
 
 	private void addToMap(String s, HashMap<String, Double> m){

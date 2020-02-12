@@ -59,6 +59,8 @@
                      <MenuItem mnemonicParsing="false" onAction="#moveLayoutToFront" text="Move to front" />
                      <MenuItem mnemonicParsing="false" onAction="#moveLayoutBackward" text="Move backward" />
                      <MenuItem mnemonicParsing="false" onAction="#moveLayoutToBack" text="Move to back" />
+                     <MenuItem mnemonicParsing="false" onAction="#displayAll" text="Display all" />
+                     <MenuItem mnemonicParsing="false" onAction="#displaySelected" text="Display Selected" />                    
                     <Menu id="selectLayout" fx:id="selectLayout" mnemonicParsing="false" onAction="#selectLayout" text="Select layout">
                      <items>
                      </items>

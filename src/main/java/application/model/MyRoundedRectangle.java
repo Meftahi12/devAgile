@@ -10,7 +10,6 @@ public class MyRoundedRectangle extends MyRectangle {
 	@Override
 	public void createShape(boolean isUsingCenter, boolean isUsingMagnetism, GridPane gridPane) {
 		initCircles();
-
 		super.createShape(isUsingCenter, isUsingMagnetism, gridPane);
 		((Rectangle) (shape)).setArcHeight(ARC_ANGLE);
 		((Rectangle) (shape)).setArcWidth(ARC_ANGLE);

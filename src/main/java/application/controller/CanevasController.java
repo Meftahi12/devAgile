@@ -99,7 +99,7 @@ public class CanevasController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		layoutsList = new ArrayList<>();
-		currLayout = new Layout("Layout0");
+		currLayout = new Layout("Layout0", true);
 		layoutsList.add(currLayout);
 		canvas.setOnMouseDragged(e -> mouseDragged(e));
 		canvas.setOnMousePressed(e -> mousePressed(e));
@@ -117,7 +117,6 @@ public class CanevasController implements Initializable {
 		startX = currentX = evt.getX();
 
 		startY = currentY = evt.getY();
-		
 		// if selectedShape is null do nothing or write with pen ( en fonction du mode de selection )
 		
 	}
@@ -178,6 +177,7 @@ public class CanevasController implements Initializable {
 					getCurrentFiller(), 
 					DEFAULT_ROTATION,
 					currLayout.getLayoutName());
+
 			if(isSelectionMode)
 				currentShape.createShape(false, isUsingMagnetism, gridPane);
 			else
@@ -321,7 +321,8 @@ public class CanevasController implements Initializable {
 		// TODO Auto-generated method stub
 		ArrayList<MyShape> list = new ArrayList<MyShape>();
 		for (Layout layout : layoutsList) {
-			list.addAll(layout.getShapesList());
+			if(layout.isDisplayed())
+				list.addAll(layout.getShapesList());
 		}
 		return list;
 	}
@@ -348,7 +349,7 @@ public class CanevasController implements Initializable {
 		this.canvas.getChildren().clear();
 		canvas.getChildren().add(gridPane);
 		LayoutsCounter++;
-		currLayout = new Layout("Layout"+LayoutsCounter);
+		currLayout = new Layout("Layout"+LayoutsCounter, true);
 		layoutsList.add(currLayout);
 	}
 
@@ -401,12 +402,12 @@ public class CanevasController implements Initializable {
 	}
 
 	public void refresh(List<MyShape> theChangeToGoTo) {
-		System.out.println(theChangeToGoTo.size());
+
 		clearAll();
 		for (MyShape myShape : theChangeToGoTo) {
 			Layout layout = findLayoutByName(myShape.getLayout());
 			if(layout == null) {
-				layout = new Layout(myShape.getLayout());
+				layout = new Layout(myShape.getLayout(), true);
 				layoutsList.add(layout);
 			}
 			layout.addShape(myShape);
@@ -436,16 +437,16 @@ public class CanevasController implements Initializable {
 					if(compShape == null) {
 						shape.resizeOnDragged(t.getSceneX(), t.getSceneY(), (Shape)t.getSource());
 					
-						
 						shape.setHandelsPos();			
 						shape.setHadelsVisible(true);
-						}
+					}
 						
 					
 					else {
 						for (MyShape currshape : compShape.getList()) {
 							currshape.resizeOnDragged(t.getSceneX(), t.getSceneY(), ((SingleShape)currshape).getShape());
-							
+							((SingleShape)currshape).setHandelsPos();			
+							((SingleShape)currshape).setHadelsVisible(true);
 						}
 					}
 				});
@@ -478,6 +479,9 @@ public class CanevasController implements Initializable {
 							double str = ((SingleShape) currshape).getStrokeSize();
 							Color color=(Color) ((SingleShape) currshape).getStrokeColor();
 							currshape.resizeOnReleased(color, str);
+							currshape.resizeOnReleased(color, str);
+							((SingleShape)currshape).setHadelsVisible(false);
+							((SingleShape)currshape).setHadelsVisible(false);
 						}
 					}
 					
@@ -728,7 +732,7 @@ public class CanevasController implements Initializable {
 	public void createNewLayout() {
 		// TODO Auto-generated method stub
 		LayoutsCounter++;
-		currLayout = new Layout("Layout" + LayoutsCounter);
+		currLayout = new Layout("Layout" + LayoutsCounter, true);
 		layoutsList.add(currLayout);
 	}
 
@@ -900,6 +904,34 @@ public class CanevasController implements Initializable {
 			}
 		}
 		menuUIController.refreshSelectLayoutList(layoutsList);
+	}
+
+	public void displayAll() {
+		// TODO Auto-generated method stub
+		ArrayList<Integer> selected = menuUIController.getSelectedLayouts();
+		for(int i = 0; i < layoutsList.size(); i++) {
+			layoutsList.get(i).setDisplayed(true);
+			currLayout = layoutsList.get(i);
+		}
+		this.canvas.getChildren().clear();
+		for (MyShape myShape : getAllShapesList()) {
+			myShape.draw(this.canvas.getChildren());
+		}	
+	}
+
+	public void displaySelected() {
+		// TODO Auto-generated method stub
+		ArrayList<Integer> selected = menuUIController.getSelectedLayouts();
+		for(int i = 0; i < layoutsList.size(); i++) {
+			if(!selected.contains(i))
+				layoutsList.get(i).setDisplayed(false);
+			else
+				currLayout = layoutsList.get(i);
+		}
+		this.canvas.getChildren().clear();
+		for (MyShape myShape : getAllShapesList()) {
+			myShape.draw(this.canvas.getChildren());
+		}	
 	}
 	
 	

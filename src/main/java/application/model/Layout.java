@@ -6,11 +6,13 @@ import java.util.Collection;
 public class Layout {
 	private String layoutName;
 	private ArrayList<MyShape> shapesList;
+	private boolean isDisplayed;
 	
-	public Layout(String string) {
+	public Layout(String string, boolean isDisplayed) {
 		// TODO Auto-generated constructor stub
 		layoutName = string;
 		shapesList = new ArrayList<MyShape>();
+		this.isDisplayed = isDisplayed;
 	}
 
 	public void addShape(MyShape lastDrawnShape) {
@@ -59,4 +61,13 @@ public class Layout {
 		// TODO Auto-generated method stub
 		shapesList.set(i, shape);
 	}
+
+	public boolean isDisplayed() {
+		return isDisplayed;
+	}
+
+	public void setDisplayed(boolean isDisplayed) {
+		this.isDisplayed = isDisplayed;
+	}
+	
 }

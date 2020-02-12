@@ -103,6 +103,7 @@ public class MenuUIController {
 		if (myShape != null) {
 
 			ArrayList<MyShape> newList = new ArrayList<>();
+			
 			newList.addAll(canevasController.getAllShapesList());
 
 			newList.addAll(myList);
@@ -388,6 +389,15 @@ public class MenuUIController {
 		canevasController.moveForward();
 	}
 
+	@FXML
+	void displayAll(ActionEvent event) {
+		canevasController.displayAll();
+	}
+	
+	@FXML
+	void displaySelected(ActionEvent event) {
+		canevasController.displaySelected();
+	}
 	@FXML
 	void moveBackward(ActionEvent event) {
 		canevasController.moveBackward();
